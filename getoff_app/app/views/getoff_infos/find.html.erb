@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p> Your Seats are Here!!! </p>
+
+<table>
+<tr>
+  <td><b>User</b></td>
+  <td><b>Station</b></td>
+  <td><b>Time</b></td>
+  <td><b>Number</b></td>
+  <td><b>hint</b></td>
+</tr> 
+
+<% @seats.each do |seat_info| %>
+<tr>
+  <td><%= seat_info.user_id %></td>
+  <td><%= seat_info.station_id %></td>
+  <td><%= seat_info.time %></td>
+  <td><%= seat_info.number %></td>
+  <td><%= seat_info.hint %></td>
+</tr>
+
+<% end %>
+</table>

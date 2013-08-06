@@ -1,0 +1,9 @@
+<%= form_tag("/getoff_infos/search",:method => "get") do %>
+<div align="center">
+  <%= image_submit_tag("seat_main.png") %>
+</div>
+<div>  
+  <%= text_field_tag 'station_name', :place_holder => 'Enter a station name for your seat here!!' %>
+  <%= hidden_field_tag(:current_time,Time.now.utc.iso8601) %>
+</div>
+<% end %>

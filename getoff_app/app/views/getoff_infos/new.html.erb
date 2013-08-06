@@ -1,0 +1,37 @@
+<div class="register">
+<%= form_for(@getoff_info) do |f| %>
+  <% if @getoff_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@getoff_info.errors.count, "error") %> prohibited this getoff_info from being saved:</h2>
+
+      <ul>
+      <% @getoff_info.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+     <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "당신 어디서 내리나요?:" %>
+    <%= f.text_field :station_name %>
+  </div>
+  <div class="field">
+    <%= f.label "몇호선 버터플라이세요?" %>
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label "무슨칸에 계신지 왜 말을 못해요?" %>
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label "자리를 찾는 당신의 힌트는?" %>
+    <%= f.text_field :hint %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+    <%= f.hidden_field :time, :value => Time.now.utc.iso8601 %>
+ 
+<% end %>
+</div>

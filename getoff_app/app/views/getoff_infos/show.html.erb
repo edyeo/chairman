@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p> Your Seats are Here!!! </p>
+
+<table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
+<tr>
+  <td><b>Station</b></td>
+  <td><b>Time</b></td>
+  <td><b>Number</b></td>
+  <td><b>hint</b></td>
+</tr> 
+
+<% @getoff_infos.each do |seat_info| %>
+<tr>
+  <td><%= seat_info.station_name %></td>
+  <td><%= seat_info.time %></td>
+  <td><%= seat_info.number %></td>
+  <td><%= seat_info.hint %></td>
+</tr>
+
+<% end %>
+</table>

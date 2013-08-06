@@ -1,0 +1,43 @@
+// Place all the styles related to the Getoff_infos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.search{
+	height: 100%;
+	margin-top:10%;
+	margin-bottom:10%;
+	margin-left:5%;
+	margin-right:5%;
+
+#button {
+	vertical-align: middle;
+	height: 70%;
+	text-align:center;
+}
+
+#icon {
+	position: relative;
+	margin-top:5%;
+	margin-bottom: 5%;
+	vertical-align: middle;
+
+}
+
+#text_field {
+	position: relative;
+	padding : 10%;
+	height: 30%;
+}
+
+	
+}
+
+
+.register{
+	margin:5%;
+}
+
+.ask_to_fill_in::-webkit-input-placeholder{
+	color:red;
+}
+

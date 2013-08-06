@@ -1,0 +1,41 @@
+<%= form_tag("/getoff_infos/search",:method => "get", :class => "search_form") do %>
+<div class = search>
+<div id = "button">
+  <%= image_submit_tag "seat_main.png", :id => "icon" %>
+</div>
+<div id = "text_field">  
+  <%= text_field_tag :station_name, nil, :id => "input", :placeholder => "Enter a station name for your seat here!!" %>
+  <%= hidden_field_tag(:current_time,Time.now.utc.iso8601) %>
+</div>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+   
+    //mouse hove effect on sumit icon
+    var newPhoto = new Image();
+    newPhoto.src = '/assets/seat_click.png';
+    var oldSrc=$('#icon').attr('src');
+    
+    $('#icon').hover(
+      function() {
+        $(this).attr('src',newPhoto.src);
+      },
+      function(){
+        $(this).attr('src', oldSrc);
+      }
+    );
+   
+   });
+
+    $('form').submit(function() {
+      if($('#input').val() == '') {
+        $('#input').attr("placeholder", "Please insert a station name");
+        $('#input').addClass("ask_to_fill_in")
+        return false;
+      }
+   }); 
+</script>
+
+
+    

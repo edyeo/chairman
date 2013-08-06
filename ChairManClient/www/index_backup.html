@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>의 자 왕</title> 
+  	<meta name="viewport" content="width=device-width, initial-scale=1"> </meta>
+  	<meta content="text/html;charset=utf-8" http-equiv="Content-Type"> </meta>
+    <meta content="utf-8" http-equiv="encoding"> </meta>
+  	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+  	<link rel="stylesheet" href="css/index.css" />
+  	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+  	<script src="js/index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.metadata.js"></script>
+
+
+    
+    </head>
+  <body>
+        <header>
+          <h3> 의 자 왕 </h3>
+          <div data-role="navbar" class="ui-navbar">
+            <ul>
+              <li><a href="#search_div">Home</a></li>
+              <li><a href="#register_div">Register</a></li>
+              <li><a href="#deal_div">Deal</a></li>    
+            </ul>
+          </div>
+        </header>
+
+
+
+        <article>
+          <div class="content_div">
+        
+            <div id="search_div" class="content_div_part">
+                <div id="search_text_area" class="content_div">
+                  <!-- 나는 <input type="Stext" id="search_text" ></input> 의 <br>
+                  의자왕이로소이다! -->
+                </div>
+
+                <div id="search_div_button_area" clas="content_div_part">
+                  <input type="image" id="search_button" src="img/sign.png" ></input>
+                </div>
+
+
+            </div>
+        
+            <div id="search_result_div" class="content_div"> 
+
+            </div>
+        
+        
+            <div id="register_div" class="content_div">
+
+                <div id="register_div_comment" class="content_div">
+                  <h3> 자리있음을 널리 알리노라! <input type="image" id="register_button" src="img/sign_icon.png"></input></h3>
+
+                </div>
+                
+                
+                <div data-role="fieldcontain" class="content_div">
+                  <label for="station_name">一. 역 이 름</label>
+                  <input type="stext" name="station_name" id="station_name" class="registration_input" placeholder="을 쓰고"></input>           
+                </div>
+            
+                <div data-role="fieldcontain" class="content_div">
+                  <label for="line_num"> 二. 라 인 넘 버</label>
+                  <input type="stext" name="line_num" id="line_num" class="registration_input" placeholder="도 쓴다"></input>       
+                </div>
+            
+                <div data-role="fieldcontain" class="content_div">
+                  <label for="container_num">三. 탑 승 칸 번 호</label>
+                  <input type="stext" name="conatiner_num" id="container_num" class="registration_input" placeholder="도 어여삐여겨 쓰고"></input>       
+                </div>
+            
+                <div data-role="fieldcontain" class="content_div">
+                  <label for="hint"> 四. 힌 트 </label>
+                  <input type="textarea" name="hint" id="hint" class="registration_input" placeholder="도 여기 쓰노라!"></input>  
+                </div>
+            </div>
+        
+            <div id="deal_div" class="content_div">
+              <div class="receive_message_div">
+
+              </div>
+              <div class="send_message_div">
+                <div class="message"><input type="text" id="message" placeholder="Say it!!" /></div>
+                <div class="button"><input type="image" id="button"  src="img/sign_icon.png"></input></div>
+              </div>
+
+            </div>
+        
+          </div>
+        </article>
+    
+  </body>
+</html>
+

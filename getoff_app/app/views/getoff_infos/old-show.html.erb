@@ -1,0 +1,32 @@
+<h1>Listing getoff_infos</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Station</th>
+    <th>Time</th>
+    <th>Number</th>
+    <th>Hint</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+<% @getoff_infos.each do |getoff_info| %>
+  <tr>
+    <td><%= getoff_info.user_id %></td>
+    <td><%= getoff_info.station_id %></td>
+    <td><%= getoff_info.time %></td>
+    <td><%= getoff_info.number %></td>
+    <td><%= getoff_info.hint %></td>
+    <td><%= link_to 'Show', getoff_info %></td>
+    <td><%= link_to 'Edit', edit_getoff_info_path(getoff_info) %></td>
+    <td><%= link_to 'Destroy', getoff_info, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Getoff info', new_getoff_info_path %>

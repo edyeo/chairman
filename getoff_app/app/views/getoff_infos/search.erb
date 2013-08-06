@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<table data-role="table" "table-custom-2" data-mode="reflow" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
+
+
+<thead>
+<tr class="ui-bar-b"> 
+  <td>역이름</td>
+  <td>호선</td>
+  <td>등록시간</td>
+  <td>탑승칸</td>
+  <td>Hint</td>
+</tr> 
+</thead>
+<tbody>
+<% if @seats.empty? %>
+ <p> No matched seats now </P>
+<% else %>
+  <% @seats.each do |seat_info| %>
+  <tr>
+	  <td><%= seat_info.station_name %></td>
+	  <td><%= seat_info.line_num %></td>
+	  <td><%= seat_info.time %></td>
+	  <td><%= seat_info.number %></td>
+	  <td><%= seat_info.hint %></td>
+    </tr>
+  <% end %>
+<% end %>
+</tbody>
+</table>
